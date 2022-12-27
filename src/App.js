@@ -10,8 +10,7 @@ function App() {
         <Route
             path="/"
             element={
-              localStorage.getItem('token') ==
-              "katqgfe8932dfs8923uhdfshjfew7892378923yu38967821drew78923789" ? (
+              localStorage.getItem('token') == process.env.REACT_APP_TOKEN_KEY ? (
                 <Post />
               ) : (
                 <Login />
@@ -21,8 +20,7 @@ function App() {
           <Route
             path="/post"
             element={
-              localStorage.getItem('token') ==
-              "katqgfe8932dfs8923uhdfshjfew7892378923yu38967821drew78923789" ? (
+              localStorage.getItem('token') == process.env.REACT_APP_TOKEN_KEY ? (
                 <Post />
               ) : (
                 <Login />

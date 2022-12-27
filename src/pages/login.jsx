@@ -20,7 +20,7 @@ export default function Login() {
   const onClick=(e)=>{
     e.preventDefault()
     if(state.username=='boo'&& state.password=='bar'){
-        const  token = "katqgfe8932dfs8923uhdfshjfew7892378923yu38967821drew78923789"
+        const  token = process.env.REACT_APP_TOKEN_KEY
         localStorage.setItem('token', token);
         history('/post')
     }
