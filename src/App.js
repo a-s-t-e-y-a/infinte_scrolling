@@ -7,10 +7,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-        <Route
+          <Route
             path="/"
             element={
-              localStorage.getItem('token') == process.env.REACT_APP_TOKEN_KEY ? (
+              localStorage.getItem("token") ==
+              process.env.REACT_APP_TOKEN_KEY ? (
                 <Post />
               ) : (
                 <Login />
@@ -20,7 +21,8 @@ function App() {
           <Route
             path="/post"
             element={
-              localStorage.getItem('token') == process.env.REACT_APP_TOKEN_KEY ? (
+              localStorage.getItem("token") ==
+              process.env.REACT_APP_TOKEN_KEY ? (
                 <Post />
               ) : (
                 <Login />
